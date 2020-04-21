@@ -1,0 +1,24 @@
+create a folder 
+
+download
+$ cd c/xxxxxx/ # folder path
+$ git init # to add .git folder and connect this folder to git
+$ git clone https://github.com/521xueweihan/HelloGitHub.git # to clone this git to local folder
+
+update
+$ git add . # add all files to git connection
+# git commit -m "some comments"
+# git push -u origin master # -u is needed if update to a new repository
+
+ 第五步：创建SSH KEY。先看一下你C盘用户目录下有没有.ssh目录，有的话看下里面有没有id_rsa和id_rsa.pub这两个文件，有就跳到下一步，没有就通过下面命令创建
+
+   $ ssh-keygen -t rsa -C "youremail@example.com"
+
+$ git remote add origin https://github.com/guyibang/TEST2.git
+
+第九步：关联好之后我们就可以把本地库的所有内容推送到远程仓库（也就是Github）上了，通过：
+
+$ git push -u origin master
+       由于新建的远程仓库是空的，所以要加上-u这个参数，等远程仓库里面有了内容之后，下次再从本地库上传内容的时候只需下面这样就可以了：
+
+$ git push origin master
